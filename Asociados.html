@@ -1,0 +1,75 @@
+<div class="section-content">
+  <h2>Asociados</h2>
+
+  <div class="asociados-container">
+    <div class="fila-asociados">
+      <div class="asociado">
+        <img src="Imagenes/Logo_I.png" alt="Inbursa" width="150">
+      </div>
+      <div class="asociado">
+        <img src="Imagenes/Logo_Q.png" alt="Qualitas" width="150">
+      </div>
+      <div class="asociado">
+        <img src="Imagenes/Logo_A.png" alt="Aserta" width="150">
+      </div>
+    </div>
+    <div class="fila-asociados">
+      <div class="asociado">
+        <img src="Imagenes/Logo_Do.png" alt="Dorama" width="150">
+      </div>
+      <div class="asociado">
+        <img src="Imagenes/Logo_In.png" alt="Insurgentes" width="150">
+      </div>
+      <div class="asociado">
+        <img src="Imagenes/Logo_Lib.png" alt="Liberty" width="150">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-content h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .asociados-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .fila-asociados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .asociado {
+    text-align: center;
+  }
+
+  .asociado img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .asociado img:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    .asociado img {
+      max-width: 100px;
+    }
+  }
+</style>

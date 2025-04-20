@@ -1,0 +1,225 @@
+/* Tipografía global con Montserrat */
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Títulos */
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Texto general */
+p, td, li {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* BURBUJAS (PRODUCTOS Y SERVICIOS) */
+.titulo-burbujas {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Ajuste de diseño para globos */
+.grid-burbujas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+  gap: 20px; /* Espaciado entre globos */
+  justify-content: center; /* Centrar globos horizontalmente */
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto; /* Centrar el grid */
+}
+
+/* Alineación específica para las últimas filas de fianzas */
+.fianzas .grid-burbujas {
+  grid-template-columns: repeat(3, 1fr); /* Para fianzas, ajusta a 3 columnas */
+}
+
+.fianzas .grid-burbujas:last-child {
+  justify-content: center; /* Centra los globos en la última fila */
+}
+
+/* Diseño de burbujas */
+.burbuja {
+  background-color: #162d77;
+  color: white;
+  padding: 40px 10px;
+  border-radius: 50% 50% 45% 45% / 50% 50% 55% 55%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s;
+  animation: palpitar 2.5s infinite ease-in-out;
+}
+
+.burbuja:hover {
+  transform: scale(1.08);
+  background-color: #0e1e4f;
+}
+
+/* Animación */
+@keyframes palpitar {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+/* Organización específica para los globos de seguros */
+.grid-burbujas.seguros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+  gap: 20px; /* Espaciado entre los globos */
+  justify-items: center; /* Centrar los globos dentro de cada celda */
+  padding: 20px;
+  max-width: 1000px; /* Limitar el ancho para mantener diseño consistente */
+  margin: auto; /* Centrar todo el grid */
+}
+/* Alineación centrada para la última fila de globos de fianzas */
+.grid-burbujas.fianzas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Se adapta al contenido */
+  gap: 20px;
+  justify-content: center; /* Centrar globos horizontalmente */
+  padding: 20px;
+  max-width: 800px;
+  margin: auto; /* Centrar el grid en la página */
+}
+
+.grid-burbujas.fianzas:last-child {
+  justify-content: center; /* Centrar los globos si hay menos en la última fila */
+}
+
+/* Diseño general (sin fondo por defecto) */
+#contenedor-productos {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Fondo blanco solo cuando se agrega esta clase */
+#contenedor-productos.con-detalle {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Diseño clásico para tabla de beneficios */
+.tabla-beneficios {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.tabla-beneficios td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  text-align: left;
+}
+/* Bordes negros para las tablas */
+#contenedor-productos table, 
+#contenedor-productos td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 8px;
+  margin: 10px auto;
+  font-size: 16px;
+}
+
+/* Ajustar imágenes de seguros/fianzas */
+#contenedor-productos img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+  .grid-burbujas.seguros {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .burbuja {
+    width: 100%;
+    height: auto;
+    padding: 25px 10px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+
+  #contenedor-productos h2.titulo-burbujas {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+}
+.grid-burbujas-cfdi {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.burbuja-cfdi {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burbuja-cfdi img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.burbuja-cfdi:hover {
+  transform: scale(1.05);
+}
+/* Efecto de agrandamiento al pasar el cursor por los botones del menú superior */
+header button,
+header .boton-menu,
+.menu-superior button {
+  transition: transform 0.3s ease;
+}
+
+header button:hover,
+header .boton-menu:hover,
+.menu-superior button:hover {
+  transform: scale(1.08);
+}

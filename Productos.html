@@ -1,0 +1,98 @@
+<div class="productos-servicios">
+  <h2>Productos y Servicios</h2>
+
+  <div id="contenedor-productos"></div>
+
+  <div class="burbujas-container">
+    <div class="burbuja" onclick="mostrarBurbujasSeguros()">Seguros</div>
+    <div class="burbuja" onclick="mostrarBurbujasFianzas()">Fianzas</div>
+  </div>
+</div>
+
+<style>
+  .productos-servicios {
+    text-align: center;
+    color: #333;
+  }
+
+  .productos-servicios h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .burbujas-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .burbuja {
+    background-color: #162d77;
+    color: white;
+    padding: 60px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .burbuja:hover {
+    background-color: #0e1e4f;
+    transform: scale(1.05);
+  }
+
+  .titulo-burbujas {
+    font-size: 28px;
+    margin: 30px 0 20px;
+    color: #162d77;
+  }
+
+  .grid-burbujas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+    justify-items: center;
+  }
+
+  .grid-burbujas .burbuja {
+    width: 150px;
+    height: 120px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .grid-burbujas .burbuja:hover {
+    animation: pulso 1.5s infinite;
+  }
+
+  @keyframes pulso {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .volver-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: #162d77;
+  font-weight: bold;
+  }
+  
+</style>
+
+<!-- Script dinámico -->
+<script src="js/seguros.js"></script>
+<script src="js/fianzas.js"></script>
+<script src="js/productos.js"></script>
