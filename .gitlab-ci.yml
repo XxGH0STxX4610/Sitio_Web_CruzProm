@@ -4,7 +4,11 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - cp -r *.html js css imagenes public/
+    - cp index.html public/
+    - cp -r css/ public/
+    - cp -r js/ public/
+    - cp -r imagenes/ public/
+    - cp VideoSitioWeb_OPT.mp4 public/
   artifacts:
     paths:
       - public
