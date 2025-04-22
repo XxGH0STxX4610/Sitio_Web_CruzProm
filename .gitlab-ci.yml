@@ -3,10 +3,10 @@ image: node:lts
 pages:
   stage: deploy
   script:
-    - mkdir .public
-    - cp -r *.html js css imagenes .public/
+    - mkdir public
+    - cp -r *.html js css imagenes public/
   artifacts:
     paths:
-      - .public
+      - public
   only:
     - main
