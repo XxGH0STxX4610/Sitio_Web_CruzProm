@@ -1,9 +1,10 @@
-image: alpine:latest
+image: node:lts
 
 pages:
+  stage: deploy
   script:
     - mkdir .public
-    - cp -r * .public
+    - cp -r *.html js css imagenes .public/
   artifacts:
     paths:
       - .public
